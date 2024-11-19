@@ -1,0 +1,57 @@
+#include <cmath>
+#include <iostream>
+
+int main()
+{
+    int calc;
+    double sum;
+    double ohm;
+    double volt;
+    double current;
+
+
+    std::cout << "********* Ohm law calculator *********\n";
+        std::cout << "choose if you want to know 1.resistance 2.voltage 3.current \n";
+        std::cin >> calc;
+
+        switch (calc) {
+        case 1:
+            std::cout << "You wanna know how much resistance is in your circuit\n";
+            std::cout << "write how much voltage is in the circuit\n";
+            std::cin >> volt;
+            std::cout << "how much current is in the circuit\n";
+            std::cin >> current;
+            sum = volt / current;
+            std::cout << sum << "ohm is in your circuit\n";
+
+            break;
+            
+        case 2:
+            std::cout << "You wanna know how much voltage is in your circuit\n";
+            std::cout << "write how much resistance is in the circuit\n";
+            std::cin >> ohm;
+            std::cout << "how much current is in the circuit\n";
+            std::cin >> current;
+            sum = ohm * current;
+            std::cout << sum << "v is in your circuit\n";
+            break;
+
+        case 3:
+            std::cout << "You wanna know how much current is in your circuit\n";
+            std::cout << "write how much voltage is in the circuit\n";
+            std::cin >> volt;
+            std::cout << "how much resistance is in the circuit\n";
+            std::cin >> ohm;
+            sum = volt / ohm;
+            std::cout << sum << "A is in your circuit\n";
+            break;
+
+        }
+       
+       
+    std::cout << "**************************************\n";
+
+    std::cout << "Calculator made by Matte\n";
+    return 0;
+}
+
